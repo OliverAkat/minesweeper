@@ -1,10 +1,41 @@
-class Board {
+class Timer {
+    constructor() {
+        this.startTime = new Date().getTime()
+        this.endTime = new Date().getTime()
+        this.paused = false;
+    }
+
+    getElapsedTime() {
+        if (!this.paused) this.endTime = new Date().getTime();
+
+        return this.endTime - this.startTime;
+    }
+
+    resetTimer() {
+        this.startTime = new Date().getTime();
+        this.endTime = new Date().getTime();
+        this.paused = false;
+    }
+
+    pauseTimer() {
+        this.paused = true
+
+        return true;
+    }
+
+    getPrintedTime() {
+        return Math.min(999, this.getElapsedTime())
+    }
+}
+
+class Game {
     constructor(height, width, bombNum) {
         this.height = height
         this.width = width
         this.bombNum = bombNum
         this.board = []
         this.dugSquares = new Set()
+        this.timer = new Timer()
     }
 
     createNewBoard() {
