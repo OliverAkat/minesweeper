@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="./index.js" defer></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <form>
+            <input type="text" name="height" id="height" placeholder="Height" value="16">
+            <input type="text" name="width" id="width" placeholder="Width" value="16">
+            <input type="text" name="bombs" id="bombs" placeholder="Bombs" value="40">
+            <button type="submit" id="new-board">Go</button>
+        </form>
+        <h1 id="endgame-message"></h1>
+        <div id="game-board"></div>
+
+
+        <div class="square undug" style="display: none !important;"></div>
+    </body>
+
 </html>

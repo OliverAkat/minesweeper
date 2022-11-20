@@ -1,0 +1,109 @@
+#game-board {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    place-items: center;
+    gap: 0;
+}
+
+.square {
+    background-color: #999;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    border: 1px solid black;
+    
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    * {
+        font-size: 90%;
+    }
+
+    input, button {
+        font-size: 20px;
+        width: 100%;
+        display: block;
+    }
+    
+    input {
+        height: 30px;
+    }
+    button {
+        height: 50px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 479px) {
+    * {
+        font-size: 80%;
+    }
+
+    input, button {
+        font-size: 20px;
+        width: 100%;
+        display: block;
+    }
+    
+    input {
+        height: 30px;
+    }
+    button {
+        height: 50px;
+    }
+}
+
+#endgame-message {
+    visibility: hidden;
+    height: 3rem;
+    text-align: center;
+}
+
+/* Device insensitive */
+.dug1 {
+    color: #0000ff;
+}
+
+.dug2 {
+    color: #007b00;
+}
+
+.dug3 {
+    color: #ff0000;
+}
+
+.dug4 {
+    color: #00007b
+}
+
+.dug5 {
+    color: #7b0000
+}
+
+.dug6 {
+    color: #007b7b;
+}
+
+.dug7 {
+    color: #000000;
+}
+
+.dug8 {
+    color: #7b7b7b;
+}
+
+.undug {
+    box-shadow: inset -5px -5px 0px 1px rgba(0,0,0,0.2),inset 5px 5px 0px 1px rgba(255,255,255,0.4);
+}
+
+.undug.flagged {
+    background-color: rgba(255, 0, 0, 0.8);
+}
