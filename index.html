@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" href="normalize.css">
         <link rel="stylesheet" href="index.css">
-        <script src="./index.js" defer></script>
+        <script src="./index.js" type="module"></script>
         <title>Document</title>
     </head>
 
@@ -18,7 +18,10 @@
             <input type="text" name="bombs" id="bombs" placeholder="Bombs" value="40">
             <button type="submit" id="new-board">Go</button>
         </form>
+
+
         <h1 id="endgame-message"></h1>
+        <h1 id="timer">00:00</h1>
         <div id="game-board"></div>
 
 
